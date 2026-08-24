@@ -41,17 +41,17 @@
             color: #ccc;
         }
 
-        .works {
+        .works, .services-list, .steps, .pricing, .faq, .contacts {
             padding: 70px 0;
         }
 
-        .works h2 {
+        .works h2, .services-list h2, .steps h2, .pricing h2, .faq h2, .contacts h2 {
             text-align: center;
             font-size: 34px;
             margin-bottom: 50px;
         }
 
-        .works h2 span {
+        .works h2 span, .services-list h2 span, .steps h2 span, .pricing h2 span, .faq h2 span, .contacts h2 span {
             color: #c9a227;
         }
 
@@ -104,16 +104,88 @@
             font-size: 14px;
         }
 
-        .contacts {
-            background: #111;
-            color: #fff;
-            padding: 60px 0;
+        .services-list ul {
+            max-width: 500px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .services-list li {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            font-size: 18px;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
             text-align: center;
         }
 
-        .contacts h2 {
-            font-size: 32px;
+        .step-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        .step-card h3 {
+            color: #c9a227;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #c9a227;
             margin-bottom: 20px;
+        }
+
+        .pricing-card p {
+            color: #555;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            color: #c9a227;
+            margin-bottom: 10px;
+        }
+
+        .contacts {
+            background: #111;
+            color: #fff;
+            text-align: center;
         }
 
         .contacts p {
@@ -149,25 +221,22 @@
         <div class="container">
             <h2>Мои <span>работы</span></h2>
             <div class="works-grid">
-
                 <div class="work-card">
                     <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600" alt="Барбершоп">
                     <div class="info">
                         <h3>BLADE — барбершоп</h3>
-                        <p>Сайт для барбершопа: услуги, цены, галерея, контакты.</p>
+                        <p>Сайт для барбершопа: услуги, мастера, отзывы, контакты.</p>
                         <a href="https://lyd1k.github.io/blade-barbershop/" target="_blank">Смотреть сайт</a>
                     </div>
                 </div>
-
                 <div class="work-card">
                     <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="Кофейня">
                     <div class="info">
                         <h3>ZERNO — кофейня</h3>
-                        <p>Уютный сайт кофейни: меню, атмосфера, контакты.</p>
+                        <p>Уютный сайт кофейни: меню, бронирование, отзывы.</p>
                         <a href="https://lyd1k.github.io/zerno-coffee/" target="_blank">Смотреть сайт</a>
                     </div>
                 </div>
-
                 <div class="work-card">
                     <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600" alt="Стример">
                     <div class="info">
@@ -176,14 +245,92 @@
                         <a href="https://lyd1k.github.io/tanksblitz/" target="_blank">Смотреть сайт</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="services-list">
+        <div class="container">
+            <h2>Что <span>я делаю</span></h2>
+            <ul>
+                <li>✅ Сайты-визитки для бизнеса</li>
+                <li>✅ Лендинги для услуг и товаров</li>
+                <li>✅ Страницы для стримеров и блогеров</li>
+                <li>✅ Адаптация под телефоны</li>
+                <li>✅ Кнопки WhatsApp, Telegram, Instagram</li>
+                <li>✅ Публикация в интернете</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2>Цены</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Сайт-визитка</h3>
+                    <div class="price">от 5 000 ₽</div>
+                    <p>До 5 блоков: о вас, услуги, контакты, кнопки соцсетей</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Лендинг</h3>
+                    <div class="price">от 8 000 ₽</div>
+                    <p>Продающая страница для товара или услуги</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Доработка</h3>
+                    <div class="price">от 2 000 ₽</div>
+                    <p>Обновление текста, фото, добавление блоков</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2>Как <span>я работаю</span></h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <h3>1</h3>
+                    <p>Вы пишете мне задачу</p>
+                </div>
+                <div class="step-card">
+                    <h3>2</h3>
+                    <p>Собираю сайт за 2–3 дня</p>
+                </div>
+                <div class="step-card">
+                    <h3>3</h3>
+                    <p>Публикую в интернете</p>
+                </div>
+                <div class="step-card">
+                    <h3>4</h3>
+                    <p>Вы получаете готовую ссылку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Частые <span>вопросы</span></h2>
+            <div class="faq-item">
+                <h3>Что нужно от меня?</h3>
+                <p>Текст, фото по желанию, контакты. Остальное я сделаю сам.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Сколько ждать сайт?</h3>
+                <p>Обычно 2–3 дня. Иногда быстрее.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Будет ли сайт работать на телефоне?</h3>
+                <p>Да, все сайты адаптивные.</p>
             </div>
         </div>
     </section>
 
     <section class="contacts">
         <div class="container">
-            <h2>Свяжитесь со мной</h2>
+            <h2>Свяжитесь <span>со мной</span></h2>
             <p>Telegram: <a href="https://t.me/icybasya" target="_blank">@icybasya</a></p>
             <p>Email: <a href="mailto:k.zernov@vk.com">k.zernov@vk.com</a></p>
             <p>Срок — 2–3 дня. Цена — от 5 000 ₽.</p>
